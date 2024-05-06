@@ -1,7 +1,5 @@
 <script lang="ts">
-	// import { InputTypeEnum } from '$lib/components/form/inputType';
-
-	import ButtonDefault from '../ui/buttonDefault.svelte';
+	import ButtonDefault from '$lib/components/ui/buttonDefault.svelte';
 
 	export let label: string = '';
 	export let placeHolder: string = '';
@@ -9,7 +7,7 @@
 	export let value: string = '';
 	export let Class: string = '';
 
-	export let copy = false;
+	export let showCopy = false;
 
 	const copyText = () => {
 		navigator.clipboard.writeText(value);
@@ -17,11 +15,13 @@
 </script>
 
 <div class="w-full relative">
-	<ButtonDefault
-		onClick={copyText}
-		id="test"
-		Class="absolute i-material-symbols-content-copy right-0 text-base-content opacity-10 hover:bg-base-content hover:opacity-80 m-3"
-	/>
+	{#if showCopy}
+		<ButtonDefault
+			onClick={copyText}
+			id="test"
+			Class="absolute i-material-symbols-content-copy right-0 text-base-content opacity-10 hover:bg-base-content hover:opacity-80 m-3"
+		/>
+	{/if}
 	<label class="w-full">
 		{#if label}
 			<span>{label}:</span>

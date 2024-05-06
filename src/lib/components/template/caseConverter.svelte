@@ -10,7 +10,7 @@
 </script>
 
 <div class="max-w-4xl w-full flex flex-col gap-8 px-3">
-	<TextAreaInput copy Class="aspect-video" bind:value={textareaValue} />
+	<TextAreaInput showCopy Class="aspect-video" bind:value={textareaValue} />
 	<div class="w-full flex flex-wrap items-center justify-center gap-2">
 		{#each Object.entries(actions) as [title, action]}
 			<ButtonDefault onClick={() => (textareaValue = action(textareaValue))}>

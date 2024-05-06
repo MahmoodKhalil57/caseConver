@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CaseConverter from '$src/lib/components/template/caseConverter.svelte';
+	import CaseConverter from '$lib/components/template/caseConverter.svelte';
 	import jsConvert from 'js-convert-case';
 
 	let actions = {
