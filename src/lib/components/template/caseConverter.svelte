@@ -14,7 +14,7 @@
 	<div class="w-full flex flex-wrap items-center justify-center gap-2">
 		{#each Object.entries(actions) as [title, action]}
 			<ButtonDefault onClick={() => (textareaValue = action(textareaValue))}>
-				{action ? action(title) : title}
+				{actions.text_case ? actions.text_case(action(title)) : title}
 			</ButtonDefault>
 		{/each}
 	</div>
