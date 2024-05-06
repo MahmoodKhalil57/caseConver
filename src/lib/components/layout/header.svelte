@@ -1,20 +1,16 @@
 <script lang="ts">
 	import Logo from '$lib/components/template/logo.svelte';
-	import Navigation from '$lib/components/layout/navigation.svelte';
 	import DarkModeToggle from '$lib/components/ui/DarkModeToggle.svelte';
 </script>
 
 <header class="z-20 relative header min-h-header w-full">
-	<div class="relative flex justify-center sm:justify-between navbar bg-base-100">
+	<div class="relative flex justify-center navbar bg-base-100">
 		<a href="/"><Logo /></a>
-		<div class="flex-none hidden sm:block">
-			<ul class="gap-3 px-1 text-lg menu menu-horizontal">
-				<Navigation />
-				<li class="flex items-center justify-center">
-					<DarkModeToggle themes={['light', 'forest']} />
-				</li>
-			</ul>
-		</div>
+		<ul class="gap-3 px-1 text-lg menu menu-horizontal">
+			<li class="flex items-center justify-center absolute">
+				<DarkModeToggle themes={['light', 'forest']} />
+			</li>
+		</ul>
 		<!-- <div class="absolute flex w-full pointer-events-none sm:hidden">
 			<label
 				for="main-menu-drawer"

@@ -32,7 +32,7 @@
 				{#each Object.entries(actions) as [title, action]}
 					<tr>
 						<th>
-							{actions.sentenceCase(title)}
+							{action(title)}
 						</th>
 						<td>param-case</td>
 						<td>
