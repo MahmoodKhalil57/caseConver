@@ -3,17 +3,17 @@
 	import jsConvert from 'js-convert-case';
 
 	let actions = {
-		camelCase: jsConvert.toCamelCase,
-		snakeCase: jsConvert.toSnakeCase,
-		pascalCase: jsConvert.toPascalCase,
-		dotCase: jsConvert.toDotCase,
-		pathCase: jsConvert.toPathCase,
-		textCase: jsConvert.toTextCase,
-		sentenceCase: jsConvert.toSentenceCase,
-		headerCase: jsConvert.toHeaderCase,
-		lowerCase: jsConvert.toLowerCase,
-		upperCase: jsConvert.toUpperCase,
-		kebabCase: jsConvert.toKebabCase
+		camel_case: jsConvert.toCamelCase,
+		snake_case: jsConvert.toSnakeCase,
+		pascal_case: jsConvert.toPascalCase,
+		dot_case: jsConvert.toDotCase,
+		path_case: jsConvert.toPathCase,
+		text_case: jsConvert.toTextCase,
+		sentence_case: jsConvert.toSentenceCase,
+		header_case: jsConvert.toHeaderCase,
+		lower_case: jsConvert.toLowerCase,
+		upper_case: jsConvert.toUpperCase,
+		kebab_case: jsConvert.toKebabCase
 	};
 </script>
 
