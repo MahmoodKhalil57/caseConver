@@ -6,7 +6,7 @@
 <header class="z-20 relative header min-h-header w-full">
 	<div class="relative flex justify-center navbar bg-base-100">
 		<a href="/"><Logo /></a>
-		<ul class="gap-3 px-1 text-lg menu menu-horizontal">
+		<ul class="gap-3 text-lg menu menu-horizontal px-0">
 			<li class="flex items-center justify-center absolute">
 				<DarkModeToggle />
 			</li>
