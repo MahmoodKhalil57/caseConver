@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Svelte Template</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#158811" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="description" content="SvelteTemplate" />
+		<link rel="manifest" crossorigin="use-credentials" href="%sveltekit.assets%/manifest.json" />
+		<link rel="icon" href="%sveltekit.assets%/pwa-192x192.png" />
+		<link rel="mask-icon" href="%sveltekit.assets%/maskable-icon-512x512.png" color="#ffffff" />
+		<link
+			rel="apple-touch-icon"
+			href="%sveltekit.assets%/apple-touch-icon-180x180.png"
+			sizes="180x180"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+
+	<script>
+		const themes = {
+			light: 'light',
+			dark: 'dark'
+		};
+
+		const storageVersion = '0.0.1';
+		const localStorageVersion = window.localStorage.getItem('storageVersion');
+
+		const storageVersionSynced = localStorageVersion
+			? localStorageVersion === storageVersion
+			: false;
+
+		if (!storageVersionSynced) {
+			window.localStorage.clear();
+			window.localStorage.setItem('storageVersion', storageVersion);
+		}
+
+		const localTheme = window.localStorage.getItem('theme');
+		const hasTheme = typeof localTheme == 'string' ? localTheme : null;
+
+		if (hasTheme) {
+			window.localStorage.setItem('theme', localTheme);
+			window.document.documentElement.setAttribute('data-theme', localTheme);
+		}
+	</script>
+
+	<body data-sveltekit-preload-data="hover">
+		<div class="w-full min-h-screen-new" style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
