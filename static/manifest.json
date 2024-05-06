@@ -1,6 +1,6 @@
 {
-	"name": "Case Converter",
-	"short_name": "CaseConverter",
+	"name": "Simple Case Converter",
+	"short_name": "Case Converter",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#ffffff",
