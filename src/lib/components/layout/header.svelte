@@ -15,11 +15,11 @@
 				</li>
 			</ul>
 		</div>
-		<div class="absolute flex w-full pointer-events-none sm:hidden">
+		<!-- <div class="absolute flex w-full pointer-events-none sm:hidden">
 			<label
 				for="main-menu-drawer"
 				class="mx-6 text-3xl cursor-pointer pointer-events-auto hover:scale-105 drawer-button i-material-symbols-list-rounded"
 			/>
-		</div>
+		</div> -->
 	</div>
 </header>

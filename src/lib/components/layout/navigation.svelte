@@ -1,11 +1,11 @@
 <script lang="ts">
 	export let menu = false;
 
-	const links = [
-		{
-			text: 'Home',
-			href: '/'
-		}
+	const links: { text: string; href: string }[] = [
+		// {
+		// 	text: 'Home',
+		// 	href: '/'
+		// }
 	];
 </script>
 

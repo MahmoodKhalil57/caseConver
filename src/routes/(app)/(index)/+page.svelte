@@ -1,34 +1,23 @@
 <script lang="ts">
-	import { apiSend, responseStatus } from '$src/lib/client/apiClient';
-	import FormBuilder from '$src/lib/components/form/formBuilder.svelte';
-	import { serverTimeStore } from '$src/lib/stores/testStore';
+	import CaseConverter from '$src/lib/components/template/caseConverter.svelte';
+	import jsConvert from 'js-convert-case';
 
-	let apiResponse:
-		| {
-				text: string;
-				quoteAuthor: string;
-				apiAuthor: string;
-		  }
-		| undefined = undefined;
-	const sendRequest = async () => {
-		const res = await apiSend(fetch).testRouter.testGet.GET({});
-		if (res.status === responseStatus.SUCCESS) {
-			apiResponse = res.body.data.quote;
-		}
+	let actions = {
+		camelCase: jsConvert.toCamelCase,
+		snakeCase: jsConvert.toSnakeCase,
+		pascalCase: jsConvert.toPascalCase,
+		dotCase: jsConvert.toDotCase,
+		pathCase: jsConvert.toPathCase,
+		textCase: jsConvert.toTextCase,
+		sentenceCase: jsConvert.toSentenceCase,
+		headerCase: jsConvert.toHeaderCase,
+		lowerCase: jsConvert.toLowerCase,
+		upperCase: jsConvert.toUpperCase,
+		kebabCase: jsConvert.toKebabCase
 	};
 </script>
 
-<section class="w-full flex flex-col justify-center items-center">
-	<button on:click={sendRequest}> Test Api </button>
-	{apiResponse ? JSON.stringify(apiResponse) : ''}
-
-	<div class="flex-col gap-6 flex-center">Hello</div>
-
-	<FormBuilder route="testRouter" procedure="testPost" />
-
-	<div>
-		Server time: {$serverTimeStore}
-	</div>
-
-	<a href="/showcase?route=testRouter&procedure=testPost&templatePage=(app)/(index)">See code</a>
+<section class="w-full flex flex-col justify-center items-center text-center py-5 prose">
+	<h1>Simple Case Converter</h1>
+	<CaseConverter {actions} />
 </section>

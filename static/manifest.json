@@ -1,11 +1,11 @@
 {
-	"name": "Svelte Template",
-	"short_name": "SvelteTemplate",
+	"name": "Case Converter",
+	"short_name": "CaseConverter",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"theme_color": "#158811",
-	"description": "Svelte Template",
+	"description": "Simple Case Converter",
 	"icons": [
 		{
 			"src": "/pwa-64x64.png",

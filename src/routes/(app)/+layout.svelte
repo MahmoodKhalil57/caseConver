@@ -12,7 +12,7 @@
 	});
 </script>
 
-<DrawerContainer closeBtn={true} drawerClass="bg-base-100" drawerId="main-menu-drawer">
+<!-- <DrawerContainer closeBtn={true} drawerClass="bg-base-100" drawerId="main-menu-drawer">
 	<svelte:fragment slot="main">
 		<Header />
 		<main class="z-10 relative flex justify-center w-full min-h-page">
@@ -21,6 +21,12 @@
 		<Footer />
 	</svelte:fragment>
 	<Navigation menu slot="drawerContent" />
-</DrawerContainer>
+</DrawerContainer> -->
+
+<Header />
+<main class="z-10 relative flex justify-center w-full min-h-page">
+	<slot />
+</main>
+<Footer />
 
 <Toaster />

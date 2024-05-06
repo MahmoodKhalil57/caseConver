@@ -1,5 +1,5 @@
 {
-	"name": "svelte_template",
+	"name": "case_converter",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -26,8 +26,10 @@
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
 		"@tailwindcss/typography": "^0.5.13",
 		"@total-typescript/ts-reset": "^0.5.1",
+		"@types/nodemailer": "^6.4.15",
 		"@typescript-eslint/parser": "^7.8.0",
 		"@vite-pwa/assets-generator": "^0.2.4",
+		"arctic": "^1.8.0",
 		"autoprefixer": "^10.4.16",
 		"daisyui": "^4.10.5",
 		"dotenv": "^16.4.5",
@@ -50,6 +52,7 @@
 	"type": "module",
 	"dependencies": {
 		"fast-memoize": "^2.5.2",
+		"js-convert-case": "^4.2.0",
 		"svelte-french-toast": "^1.2.0",
 		"zod": "^3.23.6",
 		"zod_utilz": "^0.8.2",

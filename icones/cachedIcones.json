@@ -20,11 +20,19 @@
 		"iconeColored": false
 	},
 	{
+		"iconeName": "material-symbols:content-copy",
+		"iconeColored": false
+	},
+	{
 		"iconeName": "carbon:sun",
 		"iconeColored": false
 	},
 	{
 		"iconeName": "carbon:moon",
+		"iconeColored": false
+	},
+	{
+		"iconeName": "mdi:format-letter-case",
 		"iconeColored": false
 	}
 ]
