@@ -3,7 +3,6 @@
 	import jsConvert from 'js-convert-case';
 
 	let actions = {
-		text_case: jsConvert.toTextCase,
 		sentence_case: jsConvert.toSentenceCase,
 		header_case: jsConvert.toHeaderCase,
 		lower_case: jsConvert.toLowerCase,
@@ -13,7 +12,8 @@
 		snake_case: jsConvert.toSnakeCase,
 		pascal_case: jsConvert.toPascalCase,
 		dot_case: jsConvert.toDotCase,
-		path_case: jsConvert.toPathCase
+		path_case: jsConvert.toPathCase,
+		text_case: jsConvert.toTextCase
 	};
 </script>
 
